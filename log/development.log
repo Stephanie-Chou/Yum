@@ -1,0 +1,125 @@
+  [1m[36m (0.6ms)[0m  [1mDROP DATABASE IF EXISTS "Yum_development"[0m
+  [1m[35m (0.1ms)[0m  DROP DATABASE IF EXISTS "Yum_test"
+  [1m[36m (521.6ms)[0m  [1mCREATE DATABASE "Yum_development" ENCODING = 'unicode'[0m
+  [1m[35m (311.9ms)[0m  CREATE DATABASE "Yum_test" ENCODING = 'unicode'
+  [1m[36m (48.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (7.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140917223723)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (37.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (6.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140917223723"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFriends (20140917223801)
+  [1m[35m (11.9ms)[0m  BEGIN
+  [1m[36m (14.4ms)[0m  [1mCREATE TABLE "friends" ("id" serial primary key, "user1" integer, "user2" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140917223801"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRecommendations (20140917223837)
+  [1m[35m (6.1ms)[0m  BEGIN
+  [1m[36m (8.9ms)[0m  [1mCREATE TABLE "recommendations" ("id" serial primary key, "recBy_id" integer, "recFor_id" integer, "restaurant" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140917223837"]]
+  [1m[36m (6.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRestaurants (20140917224312)
+  [1m[35m (5.7ms)[0m  BEGIN
+  [1m[36m (8.6ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140917224312"]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mDROP DATABASE IF EXISTS "Yum_development"[0m
+  [1m[35m (0.2ms)[0m  DROP DATABASE IF EXISTS "Yum_test"
+  [1m[36m (459.2ms)[0m  [1mCREATE DATABASE "Yum_development" ENCODING = 'unicode'[0m
+  [1m[35m (285.3ms)[0m  CREATE DATABASE "Yum_test" ENCODING = 'unicode'
+  [1m[36mSQL (19.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.5ms)[0m  CREATE TABLE "friends" ("id" serial primary key, "user1" integer, "user2" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "recommendations" ("id" serial primary key, "recBy_id" integer, "recFor_id" integer, "restaurant" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.7ms)[0m  CREATE TABLE "restaurants" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (18.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (2.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.8ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140917224312')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140917223723')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140917223801')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140917223837')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (23.4ms)[0m  [1mINSERT INTO "restaurants" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-09-17 22:53:32.541712"], ["name", "Purple Pig"], ["updated_at", "2014-09-17 22:53:32.541712"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (12.1ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-09-17 22:53:32.581443"], ["email", "bob@bob.com"], ["name", "bob"], ["password_digest", "bob"], ["updated_at", "2014-09-17 22:53:32.581443"]]
+  [1m[36m (5.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-09-17 22:53:32.601441"], ["email", "susie@bob.com"], ["name", "susiebob"], ["password_digest", "susie"], ["updated_at", "2014-09-17 22:53:32.601441"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (33.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (19.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140917223723)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (31.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (6.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140917223723"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFriends (20140917223801)
+  [1m[35m (6.1ms)[0m  BEGIN
+  [1m[36m (15.5ms)[0m  [1mCREATE TABLE "friends" ("id" serial primary key, "user1" integer, "user2" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140917223801"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRecommendations (20140917223837)
+  [1m[35m (6.1ms)[0m  BEGIN
+  [1m[36m (15.7ms)[0m  [1mCREATE TABLE "recommendations" ("id" serial primary key, "recBy_id" integer, "recFor_id" integer, "restaurant_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140917223837"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRestaurants (20140917224312)
+  [1m[35m (6.3ms)[0m  BEGIN
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140917224312"]]
+  [1m[36m (4.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (19.8ms)[0m  INSERT INTO "restaurants" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-09-17 22:55:37.724969"], ["name", "Purple Pig"], ["updated_at", "2014-09-17 22:55:37.724969"]]
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (7.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-09-17 22:55:42.139476"], ["email", "bob@bob.com"], ["name", "bob"], ["password_digest", "bob"], ["updated_at", "2014-09-17 22:55:42.139476"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-09-17 22:55:45.664000"], ["email", "susie@bob.com"], ["name", "susiebob"], ["password_digest", "susie"], ["updated_at", "2014-09-17 22:55:45.664000"]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "recommendations" ("created_at", "recBy_id", "recFor_id", "restaurant_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-09-17 22:55:50.176280"], ["recBy_id", 1], ["recFor_id", 2], ["restaurant_id", 1], ["updated_at", "2014-09-17 22:55:50.176280"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mRecommendation Load (9.0ms)[0m  [1mSELECT  "recommendations".* FROM "recommendations"   ORDER BY "recommendations"."id" ASC LIMIT 1[0m
+  [1m[36m (0.2ms)[0m  [1mDROP DATABASE IF EXISTS "Yum_development"[0m
+  [1m[35m (0.2ms)[0m  DROP DATABASE IF EXISTS "Yum_test"
+  [1m[36m (477.1ms)[0m  [1mCREATE DATABASE "Yum_development" ENCODING = 'unicode'[0m
+  [1m[35m (265.5ms)[0m  CREATE DATABASE "Yum_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (78.4ms)[0m  CREATE TABLE "friends" ("id" serial primary key, "user1" integer, "user2" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "recommendations" ("id" serial primary key, "recBy_id" integer, "recFor_id" integer, "restaurant_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "restaurants" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (13.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (6.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140917224312')[0m
+  [1m[35m (17.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140917223723')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140917223801')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140917223837')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (5.9ms)[0m  [1mINSERT INTO "restaurants" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-09-17 22:57:03.725738"], ["name", "Purple Pig"], ["updated_at", "2014-09-17 22:57:03.725738"]]
+  [1m[35m (11.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-09-17 22:57:03.758670"], ["email", "bob@bob.com"], ["name", "bob"], ["password_digest", "bob"], ["updated_at", "2014-09-17 22:57:03.758670"]]
+  [1m[36m (12.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-09-17 22:57:03.780040"], ["email", "susie@bob.com"], ["name", "susiebob"], ["password_digest", "susie"], ["updated_at", "2014-09-17 22:57:03.780040"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "recommendations" ("created_at", "recBy_id", "recFor_id", "restaurant_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-09-17 22:57:03.800870"], ["recBy_id", 1], ["recFor_id", 2], ["restaurant_id", 1], ["updated_at", "2014-09-17 22:57:03.800870"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "friends" ("created_at", "updated_at", "user1", "user2") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-09-17 22:57:03.853742"], ["updated_at", "2014-09-17 22:57:03.853742"], ["user1", 1], ["user2", 2]]
+  [1m[35m (6.3ms)[0m  COMMIT
+  [1m[36mFriend Load (0.9ms)[0m  [1mSELECT  "friends".* FROM "friends"   ORDER BY "friends"."id" ASC LIMIT 1[0m
+  [1m[35mRecommendation Load (0.8ms)[0m  SELECT  "recommendations".* FROM "recommendations"   ORDER BY "recommendations"."id" ASC LIMIT 1

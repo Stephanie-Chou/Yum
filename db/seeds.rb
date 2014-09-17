@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+pig = Restaurant.create(name: 'Purple Pig')
+bob = User.create(name: "bob", email: "bob@bob.com", password_digest: "bob")
+susie = User.create(name: "susiebob", email: "susie@bob.com", password_digest: "susie")
+recommendation = Recommendation.create(restaurant: pig, recBy: bob, recFor: susie)
+friend = Friend.create(user1: bob, user2: susie)
