@@ -1,0 +1,21 @@
+<div class="container">
+
+  <h1 class="user-new">Create New Account</h1>
+
+<%= form_for @user do |f| %>
+  <li><%= f.email_field :email, :autofocus => true, placeholder: 'Email' %></li>
+  <li><%= f.password_field :password, :autofocus => true, placeholder: 'Password' %></li>
+  <li><%= f.password_field :password_confirmation, :autofocus => true, placeholder: 'Confirm Password' %></li>
+  <li><%=f.submit 'Create' %></li>
+<% end %>
+
+
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+</div>

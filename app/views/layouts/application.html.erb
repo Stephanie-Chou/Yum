@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav>
+	<%if signed_in?%>
+	<ul>
+		<li>Add Friend</li>
+		<li>New Recommendation</li>
+		<li>Log Out</li>
+	</ul>
+	<%end%>
+</nav>
+	<%if signed_in?%>
+		<p> show the list of recommended stuff</p>
+	<%else%>
+		<p> Show login page stuff</p>
+	<%end%>
 
 <%= yield %>
 
