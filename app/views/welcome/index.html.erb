@@ -1,0 +1,10 @@
+	<%if signed_in?%>
+		<p> Yum! For <%=current_user.email%></p>
+	<%else%>
+		<%= form_tag("users/login", method: "post") do %>
+		  <li><%= email_field(:user, :email)%></li>
+		  <li><%= password_field(:user, :password)%></li>
+		  <%=submit_tag 'Log in' %>
+		<% end %>
+		<%= link_to "sign up", new_user_path%> 
+	<%end%>

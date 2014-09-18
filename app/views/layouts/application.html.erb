@@ -12,15 +12,13 @@
 	<ul>
 		<li>Add Friend</li>
 		<li>New Recommendation</li>
-		<li>Log Out</li>
+		<%= link_to '/users/logout', method: :post do %>
+      <li>Logout</li>
+    <% end %>
 	</ul>
 	<%end%>
 </nav>
-	<%if signed_in?%>
-		<p> show the list of recommended stuff</p>
-	<%else%>
-		<p> Show login page stuff</p>
-	<%end%>
+
 
 <%= yield %>
 
