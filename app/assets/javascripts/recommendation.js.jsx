@@ -1,12 +1,18 @@
 /*** @jsx React.DOM */
 var RecommendationCollection = React.createClass({
-	render: function(){
-		var collection = [];
+	getInitialState: function(){
+		var collection = {};
 		$.each(this.props.recommendations, function(){
-			collection.push(RenderRecommendation(this.restaurant.name, this.recBy.name));
+			collection['recommendation-'+ this.id] = (<Recommendation restaurant = {this.restaurant.name} recBy={this.recBy.name}/>)
 		});
+		return {collection: collection};
+	},
+	render: function(){
 		return(
-			<div>{collection}</div>
+			<div>
+				<h2> Yum!</h2>
+				{this.state.collection}
+			</div>
 		)
 	}
 });
@@ -14,22 +20,10 @@ var Recommendation = React.createClass({
 	render: function(){
 		return(
 			<li className = "recommendation">
-				<span>{this.props.restaurant}</span> from <span>{this.props.user}</span>
+				<span>{this.props.restaurant}</span> from <span>{this.props.recBy}</span>
 			</li>
 		)
 	}
 });
 
-function RenderRecommendation(restaurant, recBy){
-	React.renderComponent(
-	<Recommendation restaurant={restaurant} user ={recBy} />,
-	document.getElementById('main_container')
-	);
-}
 
-function RenderRecommendationCollection(recommendations){
-	React.renderComponent(
-	<RecommendationCollection recommendations={recommendations} />,
-	document.getElementById('main_container')
-	);
-}

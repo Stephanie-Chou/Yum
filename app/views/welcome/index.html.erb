@@ -1,10 +1,10 @@
 	<%if signed_in?%>
-		<h2> Yum! For <%=current_user.email%></h2>
+		<h2> Yum!</h2>
 		<%if @recommendations.length == 0%>
 			<p> No recommendations. Get more foodie friends!</p>
 		<%else%>
 			<% @recommendations.each do |rec| %>
-				<li> <%= rec.restaurant.name %></li>
+				<li> <%= rec.restaurant.name %> by <%=rec.recBy.name%></li>
 			<%end%>
 		<%end%>
 	<%else%>

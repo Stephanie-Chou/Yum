@@ -1,24 +1,90 @@
 /*** @jsx React.DOM */
 
 var Navigation = React.createClass({
+	componentDidUpdate: function(){
+		console.log("componentDidUpdate")
+	},
+	onClick: function(){
+		console.log("logout click");
+		logout();
+	},
+	navOptions: function(signed_in){
+		if (signed_in === true){
+			return (
+				<ul className="nav navbar-nav">
+		      <li id = "add_friend"><a href="#">Add Friend</a></li>
+					<li id = "new_rec"><a href="#">New Recommendation</a></li>
+		  		<li id = "logout" onClick={this.onClick}><a href="#">Logout</a></li>
+		    </ul>	
+			)
+		}
+		else{
+			return(<ul className="nav navbar-nav"></ul>)
+		}
+	},
 	render: function(){
 		return (
-			navOptions(this.props.signed_in)
+			this.navOptions(this.props.signed_in)
 		)
 	}
 });
 
-var navOptions function(signed_in){
-	if (signed_in === true){
-		return (
-			<ul className="nav navbar-nav">
-	      <li id = "add_friend"><a href="#">Add Friend</a></li>
-				<li id = "new_rec"><a href="#">New Recommendation</a></li>
-	  		<li id = "logout"><a href="#">Logout</a></li>
-	    </ul>	
+var Login = React.createClass({
+	onClick: function(){
+		console.log("clicked");
+		login();
+	},
+	render: function(){
+		console.log("in the login class");
+		return(
+			<form id="login_form">
+				<input type="email" className="form-control" id="email" placeholder="Email"/>
+				<input type="password" className="form-control" id="password" placeholder="Password"/>
+				<button type="submit" className="btn btn-default" id = "login_btn" onClick={this.onClick}>Log in</button>
+			</form>
+
 		)
 	}
-	else{
-		return(<ul className="nav navbar-nav"></ul>)
+});
+
+
+	function logout(){
+		request = $.post("users/logout");
+		request.done(function(){
+			console.log("logged out");
+			RenderNavigation(false);
+			RenderLogin();
+		})
 	}
-}
+	function login(){
+		var email = $('#email').val();
+		var password = $('#password').val();
+		request = $.post("users/login", user={email: email, password: password});
+		request.done(function(data){
+			console.log("logged in");
+			RenderNavigation(true);
+			RenderRecommendationCollection(data);
+		});
+	}
+
+
+	function RenderRecommendationCollection(recommendations){
+		React.renderComponent(
+			<RecommendationCollection recommendations={recommendations} />,
+			document.getElementById('main_container')
+		);
+	}
+	function RenderNavigation(signed_in){
+		React.renderComponent(
+			<Navigation signed_in={signed_in} />,
+			document.getElementById('navOptions')
+		);
+	}
+
+	function RenderLogin(){
+		console.log("login")
+		React.renderComponent(
+			<Login/>,
+			document.getElementById('main_container')
+		)
+	}
