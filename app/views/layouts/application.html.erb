@@ -13,9 +13,9 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <div class="container">
 	  	<div class="navbar-header">
-	      <a class="navbar-brand" href="#">Brand</a>
+	      <a class="navbar-brand" href="#">Yum!</a>
     	</div>
-	    <div class="collapse navbar-collapse">
+	    <div class="collapse navbar-collapse" id="navOptions">
 	    	<%if signed_in?%>
 	      <ul class="nav navbar-nav">
 	        <li id = "add_friend"><a href="#">Add Friend</a></li>
@@ -27,8 +27,8 @@
 	  </div>
 	</nav>
 
-
-<%= yield %>
-
+	<div class= "row col-md-6 col-md-offset-3" id = "main_container">
+		<%= yield %>
+	</div>
 </body>
 </html>
