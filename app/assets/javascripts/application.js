@@ -27,13 +27,23 @@ $(document).ready(function(){
 	});
 	$("#restaurant_btn").click(function(e){
 		e.preventDefault();
-		restaurant_name = $('#restaurant').val();
-		request = $.get("yelp");
+		console.log("Clicked enter")
+		city = $("#city").val();
+		term = $("#term").val();
+		console.log(city)
+		console.log(term)
+		request = $.get("yelp", {city: city, term: term});
 		request.done(function(data){
-
-			debugger;
+			console.log(data.businesses)
+			RenderRestaurantCollection(data.businesses);
 		});
 	});
+
+
+	// find the restaurants
+	// select restaurant to recommend
+	// select friends
+	// hit "RECOMMEND!"
 
 
 });

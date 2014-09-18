@@ -30,17 +30,15 @@ var Navigation = React.createClass({
 });
 
 var Login = React.createClass({
-	onClick: function(){
-		console.log("clicked");
+	login: function(){
 		login();
 	},
 	render: function(){
-		console.log("in the login class");
 		return(
 			<form id="login_form">
 				<input type="email" className="form-control" id="email" placeholder="Email"/>
 				<input type="password" className="form-control" id="password" placeholder="Password"/>
-				<button type="submit" className="btn btn-default" id = "login_btn" onClick={this.onClick}>Log in</button>
+				<button type="submit" className="btn btn-default" id = "login_btn" onClick={this.login}>Log in</button>
 			</form>
 
 		)
@@ -82,9 +80,23 @@ var Login = React.createClass({
 	}
 
 	function RenderLogin(){
-		console.log("login")
 		React.renderComponent(
 			<Login/>,
 			document.getElementById('main_container')
 		)
 	}
+	function RenderRestaurantCollection(restaurants){
+		React.renderComponent(
+			<RestaurantCollection restaurants = {restaurants}/>,
+			document.getElementById('restaurant_results')
+		)
+	}
+
+	function RenderFriendCollection(friends){
+		console.log(friends);
+		React.renderComponent(
+			<FriendCollection friends = {friends}/>,
+			document.getElementById('friends')
+		)
+	}
+

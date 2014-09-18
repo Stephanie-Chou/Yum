@@ -40,9 +40,17 @@
 	      </div>
 	      <div class="modal-body">
 	        <form id="restaurant_form">
-						<input type="text" className="form-control" id="restaurant" placeholder="Restaurant"/>
-						<button type="submit" className="btn btn-default" id = "restaurant_btn"> Enter</button>
+	        	<p>Search for Restaurant</p>
+						<input type="text" class="form-control" id="city" placeholder="City"/>
+						<input type="text" class="form-control" id="term" placeholder="term"/>
+						<button type="submit" class="btn btn-default" id = "restaurant_btn"> Enter</button>
 					</form>
+					<div id = "restaurant_results">
+					</div>
+					<div id = "friends">
+						<h2>Friends!</h2>
+					</div>
+					<button class="btn btn-default" id = "recommend_btn">Recommend</button>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -60,8 +68,8 @@
 	      </div>
 	      <div class="modal-body">
 	        <form id="friend_form">
-						<input type="text" className="form-control" id="friend" placeholder="friend"/>
-						<button type="submit" className="btn btn-default" id = "friend_btn"> Enter</button>
+						<input type="text" class="form-control" id="friend" placeholder="friend"/>
+						<button type="submit" class="btn btn-default" id = "friend_btn"> Enter</button>
 					</form>
 	      </div>
 	      <div class="modal-footer">

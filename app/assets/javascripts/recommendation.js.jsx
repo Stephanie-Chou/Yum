@@ -25,7 +25,3 @@ var Recommendation = React.createClass({
 		)
 	}
 });
-
-
-// when you create a new recommendation, you should rerender recommendationCollection.
-

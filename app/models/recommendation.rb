@@ -12,12 +12,16 @@ class Recommendation < ActiveRecord::Base
 	#   config.token_secret= "QqvmpQNaP6XyggS2k3eXG7HbJQs"
 	# end
 
-	def self.find
+	def self.find(location, term)
 		client = Yelp::Client.new({ consumer_key: "p1AVHI_NO6lY4azN6D0-eA",
                             consumer_secret: "iHjRAfO1MAhv_ac_u3ODwwra4jY",
                             token: "GuejeybEXXJiO7K3a2-CtmV3emSClH8u",
                             token_secret: "QqvmpQNaP6XyggS2k3eXG7HbJQs"
                           })
-		client.search('San Francisco', { term: 'food' })
+		# business = client.business('the-purple-pig-chicago')
+		results = client.search(location, { term: term })
 	end
 end
+
+
+# http://engineeringblog.yelp.com/2014/04/more-yelp-in-your-ruby.html
