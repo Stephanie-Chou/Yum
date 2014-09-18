@@ -18,8 +18,8 @@
 	    <div class="collapse navbar-collapse" id="navOptions">
 	    	<%if signed_in?%>
 	      <ul class="nav navbar-nav">
-	        <li id = "add_friend"><a href="#">Add Friend</a></li>
-					<li id = "new_rec"><a href="#">New Recommendation</a></li>
+	        <li id = "add_friend" data-toggle="modal" data-target="#friendModal"><a>Add Friend</a></li>
+					<li id = "new_rec" data-toggle="modal" data-target="#recModal"><a>New Recommendation</a></li>
       		<li id = "logout"><a href="#">Logout</a></li>
 	      </ul>	      
 	      <%end%>
@@ -30,5 +30,44 @@
 	<div class= "row col-md-6 col-md-offset-3" id = "main_container">
 		<%= yield %>
 	</div>
+	<!-- Recommendation Modal -->
+	<div class="modal fade" id="recModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Recommend the Yumminess</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form id="restaurant_form">
+						<input type="text" className="form-control" id="restaurant" placeholder="Restaurant"/>
+						<button type="submit" className="btn btn-default" id = "restaurant_btn"> Enter</button>
+					</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Friend Modal -->
+	<div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Foodie Friend Finder</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form id="friend_form">
+						<input type="text" className="form-control" id="friend" placeholder="friend"/>
+						<button type="submit" className="btn btn-default" id = "friend_btn"> Enter</button>
+					</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
 </body>
 </html>

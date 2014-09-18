@@ -25,6 +25,15 @@ $(document).ready(function(){
 		e.preventDefault();
 		logout();
 	});
+	$("#restaurant_btn").click(function(e){
+		e.preventDefault();
+		restaurant_name = $('#restaurant').val();
+		request = $.get("yelp");
+		request.done(function(data){
+
+			debugger;
+		});
+	});
 
 
 });

@@ -6,4 +6,11 @@ class WelcomeController < ApplicationController
   		p @recommendations
   	end
   end
+
+  def yelp
+  	returnVal = Recommendation.find
+  	if request.xhr?
+  		render :json => returnVal.to_json
+  	end
+  end
 end

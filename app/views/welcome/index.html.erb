@@ -4,7 +4,7 @@
 			<p> No recommendations. Get more foodie friends!</p>
 		<%else%>
 			<% @recommendations.each do |rec| %>
-				<li> <%= rec.restaurant.name %> by <%=rec.recBy.name%></li>
+				<li> <%= rec.restaurant.name %> from <%=rec.recBy.name%></li>
 			<%end%>
 		<%end%>
 	<%else%>

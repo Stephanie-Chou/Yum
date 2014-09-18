@@ -4,7 +4,7 @@ var Navigation = React.createClass({
 	componentDidUpdate: function(){
 		console.log("componentDidUpdate")
 	},
-	onClick: function(){
+	logout: function(){
 		console.log("logout click");
 		logout();
 	},
@@ -12,9 +12,9 @@ var Navigation = React.createClass({
 		if (signed_in === true){
 			return (
 				<ul className="nav navbar-nav">
-		      <li id = "add_friend"><a href="#">Add Friend</a></li>
-					<li id = "new_rec"><a href="#">New Recommendation</a></li>
-		  		<li id = "logout" onClick={this.onClick}><a href="#">Logout</a></li>
+		      <li id = "add_friend" data-toggle="modal" data-target="#friendModal"><a>Add Friend</a></li>
+					<li id = "new_rec" data-toggle="modal" data-target="#recModal"><a>New Recommendation</a></li>
+		  		<li id = "logout" onClick={this.logout}><a>Logout</a></li>
 		    </ul>	
 			)
 		}
