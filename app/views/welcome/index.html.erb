@@ -1,10 +1,19 @@
 	<%if signed_in?%>
-		<p> Yum! For <%=current_user.email%></p>
+		<h2> Yum! For <%=current_user.email%></h2>
+		<%if @recommendations.length == 0%>
+			<p> No recommendations. Get more foodie friends!</p>
+		<%else%>
+			<% @recommendations.each do |rec| %>
+				<li> <%= rec.restaurant.name %></li>
+			<%end%>
+		<%end%>
+
 	<%else%>
-		<%= form_tag("users/login", method: "post") do %>
-		  <li><%= email_field(:user, :email)%></li>
-		  <li><%= password_field(:user, :password)%></li>
-		  <%=submit_tag 'Log in' %>
-		<% end %>
+		<form id="login_form">
+		   <input type="email" class="form-control" id="email" placeholder="Email">
+		   <input type="password" class="form-control" id="password" placeholder="Password">
+		   <button type="submit" class="btn btn-default" id = "login_btn">Log in</button>
+
+		</form>
 		<%= link_to "sign up", new_user_path%> 
 	<%end%>

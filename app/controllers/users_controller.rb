@@ -17,13 +17,12 @@ class UsersController < ApplicationController
   end
 
   def login
-  	p params
-    @user = User.find_by_email(params[:user][:email])
-    puts @user
-      if @user && @user.authenticate(params[:user][:password])
-        session[:user_id] = @user.id
-      end
-      redirect_to root_path
+  	p "LOGIN"
+  	@user = User.find_by_email(params[:email])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+    end
+    redirect_to root_path
   end
 
   def logout
