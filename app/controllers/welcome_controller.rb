@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
   	if signed_in?
   		@recommendations = Recommendation.where(recFor: current_user)
   	end
+    @friend_requests = User.find_friend_requests(current_user)
   end
 
   def yelp
@@ -21,6 +22,29 @@ class WelcomeController < ApplicationController
     end
   end
   
+  def friend_request
+    if User.exists?(email: params[:email])
+      user = User.find_by(email: params[:email])
+      Friend.create(user1: current_user, user2: user, accepted: false)
+      if request.xhr?
+        render :json => {status: 200, message: "Yum!"}
+      end
+    else
+      if request.xhr?
+        render :json => {status: 100, message: "Sorry. That email doesn't exist!"}
+      end
+    end
+  end
+
+  def accept_request
+    friend = Friend.find(params[:id])
+    if params[:accept] == true
+
+    else
+
+    end
+  end
+
   def recommend
     # create recommendation
     p params
