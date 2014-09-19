@@ -29344,3 +29344,2876 @@ Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:29:12 -050
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:29:12 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:30:55 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36m (0.2ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.3ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 335ms (Views: 328.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:30:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:30:59 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:31:20 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36m (0.3ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.4ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 334ms (Views: 318.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:31:21 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:33:09 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36m (0.3ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.3ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 351ms (Views: 343.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:33:10 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36m (0.4ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.4ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 447ms (Views: 365.8ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:39:52 -0500
+
+
+Started GET "/yelp?city=chicago&term=artopolis" for 127.0.0.1 at 2014-09-19 17:40:03 -0500
+Processing by WelcomeController#yelp as */*
+  Parameters: {"city"=>"chicago", "term"=>"artopolis"}
+Completed 200 OK in 927ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2014-09-19 17:40:05 -0500
+Processing by WelcomeController#friends as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT "friends"."user2" FROM "friends"  WHERE "friends"."user1" = 2 AND "friends"."accepted" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 't'
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/recommend" for 127.0.0.1 at 2014-09-19 17:40:08 -0500
+Processing by WelcomeController#recommend as */*
+  Parameters: {"restaurant"=>{"name"=>"Artopolis", "url"=>"http://m.yelp.com/biz/artopolis-chicago"}, "friend"=>{"name"=>"bob", "email"=>"bob@bob.com"}}
+  [1m[35mRestaurant Exists (1.0ms)[0m  SELECT  1 AS one FROM "restaurants"  WHERE "restaurants"."name" = 'Artopolis' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "restaurants" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-09-19 22:40:08.267070"], ["name", "Artopolis"], ["updated_at", "2014-09-19 22:40:08.267070"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'bob@bob.com' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recommendations" ("created_at", "recBy_id", "recFor_id", "restaurant_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-09-19 22:40:08.278276"], ["recBy_id", 2], ["recFor_id", 1], ["restaurant_id", 2], ["updated_at", "2014-09-19 22:40:08.278276"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:40:18 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Friend without an ID):
+  app/controllers/welcome_controller.rb:40:in `accept_request'
+
+
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (22.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:40:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36m (0.3ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.6ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 604ms (Views: 534.8ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:38 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:39 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:39 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:39 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:39 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:39 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:39 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:40:39 -0500
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:40:45 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Friend without an ID):
+  app/controllers/welcome_controller.rb:40:in `accept_request'
+
+
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.2ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (23.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36m (0.3ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.4ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 337ms (Views: 330.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:48 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriend Load (0.6ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36m (0.4ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.5ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 214ms (Views: 205.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:42:59 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriend Load (0.5ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36m (0.3ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.3ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 352ms (Views: 343.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:08 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:09 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:09 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriend Load (0.7ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36m (0.4ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.4ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 166ms (Views: 158.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:43:55 -0500
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:44:47 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Friend without an ID):
+  app/controllers/welcome_controller.rb:40:in `accept_request'
+
+
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (21.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:44:47 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36m (0.3ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.8ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 345ms (Views: 336.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:44:48 -0500
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:44:53 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true", "id"=>"3"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends"  WHERE "friends"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Friend with 'id'=3):
+  app/controllers/welcome_controller.rb:40:in `accept_request'
+
+
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.3ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (18.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:48:10 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mRecommendation Load (0.4ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (20.1ms)
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 369ms (Views: 339.9ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:11 -0500
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:48:13 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true", "id"=>"2"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends"  WHERE "friends"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: accept):
+  app/controllers/welcome_controller.rb:44:in `accept_request'
+
+
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (19.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mRecommendation Load (0.3ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (21.0ms)
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 289ms (Views: 260.6ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:42 -0500
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:48:45 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true", "id"=>"2"}
+  [1m[35mFriend Load (0.4ms)[0m  SELECT  "friends".* FROM "friends"  WHERE "friends"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mRecommendation Load (0.3ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 231ms (Views: 224.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:48:48 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:49:59 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRecommendation Load (0.4ms)[0m  SELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (21.4ms)
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 275ms (Views: 246.5ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:49:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:49:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:49:59 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:49:59 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:50:00 -0500
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:50:02 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true", "id"=>"2"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends"  WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `save' for true:TrueClass):
+  app/controllers/welcome_controller.rb:46:in `accept_request'
+
+
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/stephaniechou/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (20.7ms)
+  [1m[36mFriend Load (1.0ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:51:23 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRecommendation Load (0.5ms)[0m  SELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (22.5ms)
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 275ms (Views: 247.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:51:24 -0500
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:51:27 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true", "id"=>"2"}
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT  "friends".* FROM "friends"  WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRecommendation Load (0.3ms)[0m  SELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (16.6ms)
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 244ms (Views: 222.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:52:16 -0500
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:52:18 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true", "id"=>"2"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends"  WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "friends" SET "accepted" = $1, "updated_at" = $2 WHERE "friends"."id" = 2[0m  [["accepted", "t"], ["updated_at", "2014-09-19 22:52:18.955396"]]
+  [1m[35m (8.0ms)[0m  COMMIT
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:53:24 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mRecommendation Load (0.3ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 2[0m
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 'f'
+Completed 200 OK in 334ms (Views: 328.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:53:25 -0500
+
+
+Started GET "/yelp?city=chicago&term=french" for 127.0.0.1 at 2014-09-19 17:53:46 -0500
+Processing by WelcomeController#yelp as */*
+  Parameters: {"city"=>"chicago", "term"=>"french"}
+Completed 200 OK in 828ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2014-09-19 17:53:48 -0500
+Processing by WelcomeController#friends as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  SELECT "friends"."user2" FROM "friends"  WHERE "friends"."user1" = 2 AND "friends"."accepted" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT "friends"."user1" FROM "friends"  WHERE "friends"."user2" = 2 AND "friends"."accepted" = 't'[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/recommend" for 127.0.0.1 at 2014-09-19 17:53:53 -0500
+Processing by WelcomeController#recommend as */*
+  Parameters: {"restaurant"=>{"name"=>"Avec", "url"=>"http://m.yelp.com/biz/avec-chicago"}, "friend"=>{"name"=>"winnie the pooh", "email"=>"winnie@the.pooh"}}
+  [1m[35mRestaurant Exists (1.3ms)[0m  SELECT  1 AS one FROM "restaurants"  WHERE "restaurants"."name" = 'Avec' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.2ms)[0m  INSERT INTO "restaurants" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-09-19 22:53:53.832994"], ["name", "Avec"], ["updated_at", "2014-09-19 22:53:53.832994"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'winnie@the.pooh' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recommendations" ("created_at", "recBy_id", "recFor_id", "restaurant_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-09-19 22:53:53.852000"], ["recBy_id", 2], ["recFor_id", 3], ["restaurant_id", 3], ["updated_at", "2014-09-19 22:53:53.852000"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 200 OK in 53ms (Views: 0.3ms | ActiveRecord: 15.2ms)
+
+
+Started POST "/users/logout" for 127.0.0.1 at 2014-09-19 17:53:56 -0500
+Processing by UsersController#logout as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/logout" for 127.0.0.1 at 2014-09-19 17:53:56 -0500
+Processing by UsersController#logout as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:53:56 -0500
+Processing by WelcomeController#index as */*
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'[0m
+Completed 200 OK in 244ms (Views: 242.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:53:56 -0500
+Processing by WelcomeController#index as */*
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[35mFriend Load (0.7ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'
+Completed 200 OK in 214ms (Views: 211.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"winnie@the.pooh", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'winnie@the.pooh' LIMIT 1[0m
+  [1m[35mRecommendation Load (0.3ms)[0m  SELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 3
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 105ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  [1m[36mFriend Load (0.5ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'[0m
+Completed 200 OK in 247ms (Views: 245.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:03 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:04 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:04 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:04 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:04 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:04 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:04 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:54:04 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:04 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:04 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[35mFriend Load (0.6ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'
+Completed 200 OK in 232ms (Views: 230.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:06 -0500
+
+
+Started POST "/users/login" for 127.0.0.1 at 2014-09-19 17:54:13 -0500
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"winnie@the.pooh", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'winnie@the.pooh' LIMIT 1[0m
+  [1m[35mRecommendation Load (0.3ms)[0m  SELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 3
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 88ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2014-09-19 17:54:13 -0500
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"winnie@the.pooh", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'winnie@the.pooh' LIMIT 1[0m
+  [1m[35mRecommendation Load (0.4ms)[0m  SELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 3
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 92ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/friend_request?email=bob%40bob.com" for 127.0.0.1 at 2014-09-19 17:54:24 -0500
+Processing by WelcomeController#friend_request as */*
+  Parameters: {"email"=>"bob@bob.com"}
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'bob@bob.com' LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'bob@bob.com' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "friends" ("accepted", "created_at", "updated_at", "user1", "user2") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["accepted", "f"], ["created_at", "2014-09-19 22:54:24.820493"], ["updated_at", "2014-09-19 22:54:24.820493"], ["user1", 3], ["user2", 1]]
+  [1m[35m (6.6ms)[0m  COMMIT
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:54:24 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mRecommendation Load (0.5ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 3[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+  [1m[35mFriend Load (0.5ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 3 AND "friends"."accepted" = 'f'
+Completed 200 OK in 356ms (Views: 351.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:25 -0500
+
+
+Started POST "/users/logout" for 127.0.0.1 at 2014-09-19 17:54:30 -0500
+Processing by UsersController#logout as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/logout" for 127.0.0.1 at 2014-09-19 17:54:30 -0500
+Processing by UsersController#logout as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:54:30 -0500
+Processing by WelcomeController#index as */*
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'[0m
+Completed 200 OK in 239ms (Views: 237.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:54:31 -0500
+Processing by WelcomeController#index as */*
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'
+Completed 200 OK in 214ms (Views: 213.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2014-09-19 17:54:35 -0500
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"bob@bob.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'bob@bob.com' LIMIT 1[0m
+  [1m[35mRecommendation Load (0.4ms)[0m  SELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 1
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 101ms (Views: 0.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:54:35 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'[0m
+Completed 200 OK in 240ms (Views: 239.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:36 -0500
+
+
+Started POST "/users/login" for 127.0.0.1 at 2014-09-19 17:54:40 -0500
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"bob@bob.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'bob@bob.com' LIMIT 1
+  [1m[36mRecommendation Load (0.5ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 1[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 95ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2014-09-19 17:54:40 -0500
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"bob@bob.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'bob@bob.com' LIMIT 1
+  [1m[36mRecommendation Load (0.4ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 1[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 93ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:54:45 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecommendation Load (0.3ms)[0m  SELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 1
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  [1m[36mFriend Load (0.7ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 1 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 236ms (Views: 229.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:54:46 -0500
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:54:52 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true", "id"=>"3"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends"  WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "friends" SET "accepted" = $1, "updated_at" = $2 WHERE "friends"."id" = 3[0m  [["accepted", "t"], ["updated_at", "2014-09-19 22:54:52.185708"]]
+  [1m[35m (7.9ms)[0m  COMMIT
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:56:07 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mRecommendation Load (0.4ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 1[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered welcome/index.html.erb within layouts/application (3.6ms)
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 1 AND "friends"."accepted" = 'f'
+Completed 200 OK in 354ms (Views: 347.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:07 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:07 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:08 -0500
+
+
+Started POST "/users/logout" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+Processing by UsersController#logout as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/logout" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+Processing by UsersController#logout as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+Processing by WelcomeController#index as */*
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'[0m
+Completed 200 OK in 195ms (Views: 193.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:56:16 -0500
+Processing by WelcomeController#index as */*
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'
+Completed 200 OK in 180ms (Views: 179.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'[0m
+Completed 200 OK in 163ms (Views: 161.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:18 -0500
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-09-19 17:56:19 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 251ms (Views: 250.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-09-19 17:56:34 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8souRR2CuK+W9Gn65JDv65owOMEz5kzJweKJuB0lT3Y=", "user"=>{"name"=>"stephanie", "email"=>"stephanie@stephanie.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create"}
+Unpermitted parameters: name
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-09-19 22:56:34.847149"], ["email", "stephanie@stephanie.com"], ["password_digest", "$2a$10$LSqK3tBcRz/XA6uXicVLtes24kB6mxYYx84gOoCr81UICCF.Of0XC"], ["updated_at", "2014-09-19 22:56:34.847149"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 105ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:56:34 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mRecommendation Load (0.4ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 4[0m
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 4 AND "friends"."accepted" = 'f'
+Completed 200 OK in 205ms (Views: 201.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:35 -0500
+
+
+Started GET "/friend_request?email=winnie%40the.pooh" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+Processing by WelcomeController#friend_request as */*
+  Parameters: {"email"=>"winnie@the.pooh"}
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'winnie@the.pooh' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'winnie@the.pooh' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (12.2ms)[0m  [1mINSERT INTO "friends" ("accepted", "created_at", "updated_at", "user1", "user2") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["accepted", "f"], ["created_at", "2014-09-19 22:56:46.059687"], ["updated_at", "2014-09-19 22:56:46.059687"], ["user1", 4], ["user2", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mRecommendation Load (0.3ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 4[0m
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 4 AND "friends"."accepted" = 'f'
+Completed 200 OK in 187ms (Views: 182.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:46 -0500
+
+
+Started POST "/users/logout" for 127.0.0.1 at 2014-09-19 17:56:52 -0500
+Processing by UsersController#logout as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/logout" for 127.0.0.1 at 2014-09-19 17:56:52 -0500
+Processing by UsersController#logout as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:56:52 -0500
+Processing by WelcomeController#index as */*
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'[0m
+Completed 200 OK in 204ms (Views: 203.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:56:52 -0500
+Processing by WelcomeController#index as */*
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'
+Completed 200 OK in 206ms (Views: 205.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"winnie@the.pooh", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'winnie@the.pooh' LIMIT 1[0m
+  [1m[35mRecommendation Load (0.4ms)[0m  SELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 3
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 95ms (Views: 0.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" IS NULL AND "friends"."accepted" = 'f'[0m
+Completed 200 OK in 230ms (Views: 228.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:00 -0500
+
+
+Started POST "/users/login" for 127.0.0.1 at 2014-09-19 17:57:06 -0500
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"winnie@the.pooh", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'winnie@the.pooh' LIMIT 1
+  [1m[36mRecommendation Load (0.3ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 3[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 100ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2014-09-19 17:57:06 -0500
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"winnie@the.pooh", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'winnie@the.pooh' LIMIT 1
+  [1m[36mRecommendation Load (0.3ms)[0m  [1mSELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 3[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 87ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:57:16 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mRecommendation Load (0.5ms)[0m  SELECT "recommendations".* FROM "recommendations"  WHERE "recommendations"."recFor_id" = 3
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants"  WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (7.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered welcome/index.html.erb within layouts/application (12.4ms)
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"  WHERE "friends"."user2" = 3 AND "friends"."accepted" = 'f'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 254ms (Views: 242.8ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:57:16 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/react.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/friend.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/navigation.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/recommendation.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/restaurant.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:17 -0500
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2014-09-19 17:57:37 -0500
+Processing by WelcomeController#accept_request as */*
+  Parameters: {"response"=>"true", "id"=>"4"}
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT  "friends".* FROM "friends"  WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "friends" SET "accepted" = $1, "updated_at" = $2 WHERE "friends"."id" = 4[0m  [["accepted", "t"], ["updated_at", "2014-09-19 22:57:37.120749"]]
+  [1m[35m (5.9ms)[0m  COMMIT
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 6.7ms)
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users"

@@ -78,10 +78,10 @@
 						<h4> People Who Want to Eat Food with You</h4>
 						<%unless @friend_requests.nil?%>
 							<%@friend_requests.each do |request|%>
-								<li class = "request"><%= request.name%>
+								<li class = "request" id = <%=request.id%>><%= request.user1.name%>
 									<div>
-										<button type="button" class="btn btn-success" class="accept">Yum!</button>
-										<button type="button" class="btn btn-danger" class="reject">Nope</button>
+										<button type="button" class="btn btn-success accept">Yum!</button>
+										<button type="button" class="btn btn-danger reject">Nope</button>
 									</div>
 								</li>
 							<%end%>

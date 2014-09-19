@@ -10,11 +10,10 @@ class User < ActiveRecord::Base
 	end
 
 	def self.find_friend_requests(user)
+		# returns an array of friends
 		friends = []
 		# user2 is the requestee
 		p "*"*100
-		p Friend.where(user2: user, accepted: false)
-		Friend.where(user2: user, accepted: false).pluck('user1').each{|id| friends << User.find(id)}
-		return friends
+		Friend.where(user2: user, accepted: false)
 	end
 end

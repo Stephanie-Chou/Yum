@@ -38,10 +38,16 @@ class WelcomeController < ApplicationController
 
   def accept_request
     friend = Friend.find(params[:id])
-    if params[:accept] == true
-
+    if params[:response] == "true"
+      friend.update(accepted: true)
+      message = "you have a new friend!"
     else
+      # friend.destroy
+      message = "shhh. you rejected someone"
+    end
 
+    if request.xhr?
+      render :json => {status: 200, message: message}
     end
   end
 

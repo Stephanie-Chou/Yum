@@ -57,5 +57,27 @@ $(document).ready(function(){
 		});
 	});
 
+	$(".request").click(function(e){
+		var response;
+		var id = $(this).attr('id');
+		if (e.target.classList.contains("accept")){
+			response = true; 
+		}
+		else{
+			response = false;
+		}
+		var request = $.post('accept_request', {response: response, id: id});
+		request.done(function(data){
+			if (data.status === 200){
+				$("#friendModal_alert").html('<div class="alert alert-success" role="alert">'+data.message+'</div>')
+			}
+			else{
+				$("#friendModal_alert").html('<div class="alert alert-danger" role="alert">'+data.message+'</div>')
+			}
+			// removed the friend from the list
+			this.remove();
+			debugger;
+		}.bind(this));
+	});
 
 });
