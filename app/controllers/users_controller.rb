@@ -17,12 +17,18 @@ class UsersController < ApplicationController
   end
 
   def login
-  	p "LOGIN"
   	@user = User.find_by_email(params[:email])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
+
     end
-    redirect_to root_path
+    # redirect_to root_path
+
+    if request.xhr?
+    	render :json => Recommendation.where(recFor: @user).to_json(:include => [:restaurant, :recBy])
+    else
+    	redirect_to root_path
+    end
   end
 
   def logout
