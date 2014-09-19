@@ -36,6 +36,9 @@ gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 
 
 gem 'yelp', require: 'yelp'
+
+
+gem 'pry', '~>0.10.1'
 # Use unicorn as the app server
 # gem 'unicorn'
 

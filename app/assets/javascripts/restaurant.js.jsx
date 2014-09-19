@@ -23,9 +23,19 @@ var RestaurantCollection = React.createClass({
 	}
 })
 
+var selectedRestaurant = {};
+
 var Restaurant = React.createClass({
 	onClick: function(){
 		getFriends();	
+		// var name = this.props.name
+		// $('#restaurant_results').html('<p>'+name+'<p>')
+		selectedRestaurant["name"]=this.props.name
+		selectedRestaurant["url"]=this.props.url
+		React.renderComponent(
+			<Restaurant id = {this.props.id} name = {this.props.name}/>,
+			document.getElementById('restaurant_results')
+		)
 	},
 	render: function(){
 		return(

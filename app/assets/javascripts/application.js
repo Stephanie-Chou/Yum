@@ -39,7 +39,14 @@ $(document).ready(function(){
 		});
 	});
 
-
+	$("#recommend_btn").click(function(){
+		console.log("hit recommend");
+		request = $.post("recommend", {restaurant: selectedRestaurant, friend: selectedFriend })
+		request.done(function(data){
+			// send alert done
+			$("#recModal_alert").html('<div class="alert alert-success" role="alert">Yum!</div>')
+		});
+	});
 	// find the restaurants
 	// select restaurant to recommend
 	// select friends

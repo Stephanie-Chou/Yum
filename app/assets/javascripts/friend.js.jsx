@@ -5,15 +5,15 @@ var FriendCollection = React.createClass({
 		var collection = {};
 		friends = this.props.friends
 		$.each(friends, function(i){
-			collection["friend-"+this.id] = (<Friend id={this.id} name = {this.name}/>)
+			collection["friend-"+this.id] = (<Friend id={this.id} name = {this.name} email={this.email}/>)
 		});
 		return {collection: collection};
 	},
 	componentWillReceiveProps: function(nextProps){
 		console.log(nextProps)
 		var collection = {};
-		$.each(nextProps.friends, function(){
-			collection["friend-"+this.id] = (<Friend id={this.id} name = {this.name}/>)
+		$.each(nextProps.friends, function(d){
+			collection["friend-"+this.id] = (<Friend id={this.id} name = {this.name} email={this.email}/>)
 		});
 		this.setState({collection: collection})
 	},
@@ -24,9 +24,19 @@ var FriendCollection = React.createClass({
 	}
 })
 
+var selectedFriend = {};
+
 var Friend = React.createClass({
 	onClick: function(){
-		// select the friend. put name of friend in a place.
+		// var name = this.props.name
+		// $('#friends').html('<p>'+name+'<p>');
+
+		selectedFriend["name"]=this.props.name
+		selectedFriend["email"]=this.props.email
+		React.renderComponent(
+			<Friend id = {this.props.id} name = {this.props.name} email= {this.props.email}/>,
+			document.getElementById('friends')
+		)
 	},
 	render: function(){
 		return(

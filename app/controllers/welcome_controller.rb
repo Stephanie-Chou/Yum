@@ -23,6 +23,15 @@ class WelcomeController < ApplicationController
   
   def recommend
     # create recommendation
+    p params
+    if Restaurant.exists?(:name => params[:restaurant][:name])
+      restaurant = Restaurant.find_by(name: params[:restaurant][:name]);
+    else
+      restaurant = Restaurant.create(name: params[:restaurant][:name])
+    end
+
+    friend = User.find_by(email: params[:friend][:email]);
+    Recommendation.create(restaurant: restaurant, recBy: current_user, recFor: friend)
     if request.xhr?
       render :json => {message: "Yum!"}
     end

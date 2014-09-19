@@ -93,7 +93,6 @@ var Login = React.createClass({
 	}
 
 	function RenderFriendCollection(friends){
-		console.log(friends);
 		React.renderComponent(
 			<FriendCollection friends = {friends}/>,
 			document.getElementById('friends')
