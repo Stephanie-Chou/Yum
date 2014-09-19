@@ -14,4 +14,43 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require react
 //= require_tree .
+$(document).ready(function(){
+	$("#login_btn").on("click", function(e){
+		e.preventDefault();
+		login();
+	});
+	$("#logout").on("click", function(e){
+		e.preventDefault();
+		logout();
+	});
+	$("#restaurant_btn").click(function(e){
+		e.preventDefault();
+		console.log("Clicked enter")
+		city = $("#city").val();
+		term = $("#term").val();
+		console.log(city)
+		console.log(term)
+		request = $.get("yelp", {city: city, term: term});
+		request.done(function(data){
+			console.log(data.businesses)
+			RenderRestaurantCollection(data.businesses);
+		});
+	});
+
+	$("#recommend_btn").click(function(){
+		console.log("hit recommend");
+		request = $.post("recommend", {restaurant: selectedRestaurant, friend: selectedFriend })
+		request.done(function(data){
+			// send alert done
+			$("#recModal_alert").html('<div class="alert alert-success" role="alert">Yum!</div>')
+		});
+	});
+	// find the restaurants
+	// select restaurant to recommend
+	// select friends
+	// hit "RECOMMEND!"
+
+
+});

@@ -31,6 +31,14 @@ gem 'bcrypt', '~> 3.1.7'
 
 
 gem 'bootstrap-sass', '~> 3.2.0'
+#Add React framework to project
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
+
+
+gem 'yelp', require: 'yelp'
+
+
+gem 'pry', '~>0.10.1'
 # Use unicorn as the app server
 # gem 'unicorn'
 
