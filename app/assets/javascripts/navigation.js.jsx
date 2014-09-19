@@ -59,6 +59,7 @@ var Login = React.createClass({
 		var password = $('#password').val();
 		request = $.post("users/login", user={email: email, password: password});
 		request.done(function(data){
+			console.log(data);
 			console.log("logged in");
 			RenderNavigation(true);
 			RenderRecommendationCollection(data);
