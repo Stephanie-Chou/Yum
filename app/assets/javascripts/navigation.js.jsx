@@ -1,9 +1,9 @@
 /*** @jsx React.DOM */
 
 var Navigation = React.createClass({
-	componentDidUpdate: function(){
-		console.log("componentDidUpdate")
-	},
+	// componentDidUpdate: function(){
+	// 	console.log("componentDidUpdate")
+	// },
 	logout: function(){
 		console.log("logout click");
 		logout();
@@ -35,11 +35,14 @@ var Login = React.createClass({
 	},
 	render: function(){
 		return(
+			<div>
 			<form id="login_form">
 				<input type="email" className="form-control" id="email" placeholder="Email"/>
 				<input type="password" className="form-control" id="password" placeholder="Password"/>
 				<button type="submit" className="btn btn-default" id = "login_btn" onClick={this.login}>Log in</button>
 			</form>
+			<a href="users/new">sign up</a>
+			</div>
 
 		)
 	}
@@ -47,6 +50,7 @@ var Login = React.createClass({
 
 
 	function logout(){
+		console.log("logout")
 		request = $.post("users/logout");
 		request.done(function(){
 			console.log("logged out");
@@ -55,6 +59,7 @@ var Login = React.createClass({
 		})
 	}
 	function login(){
+		console.log("login")
 		var email = $('#email').val();
 		var password = $('#password').val();
 		request = $.post("users/login", user={email: email, password: password});
@@ -62,6 +67,7 @@ var Login = React.createClass({
 			console.log("logged in");
 			RenderNavigation(true);
 			RenderRecommendationCollection(data);
+			debugger;
 		});
 	}
 

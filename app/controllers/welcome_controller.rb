@@ -5,6 +5,9 @@ class WelcomeController < ApplicationController
   		@recommendations = Recommendation.where(recFor: current_user)
   	end
     @friend_requests = User.find_friend_requests(current_user)
+    if request.xhr?
+      render :json => @friend_requests.to_json
+    end
   end
 
   def yelp

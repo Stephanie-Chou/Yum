@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 	has_many :friends
 	has_secure_password
 
+
 	def self.find_friends(user)
 		friends = []
 		Friend.where(user1: user, accepted: true).pluck('user2').each{|id| friends << User.find(id)}

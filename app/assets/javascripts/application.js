@@ -13,15 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
 //= require react
+//= require bootstrap-sprockets
 //= require_tree .
 $(document).ready(function(){
 	$("#login_btn").on("click", function(e){
 		e.preventDefault();
+		console.log("login button")
 		login();
 	});
 	$("#logout").on("click", function(e){
+		console.log("logout button")
 		e.preventDefault();
 		logout();
 	});
@@ -76,7 +78,6 @@ $(document).ready(function(){
 			}
 			// removed the friend from the list
 			this.remove();
-			debugger;
 		}.bind(this));
 	});
 

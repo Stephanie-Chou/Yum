@@ -1,5 +1,6 @@
 	<%if signed_in?%>
 		<h2> Yum!</h2>
+		<h4>Recommendations for <%=current_user.name%>:</h4>
 		<%if @recommendations.length == 0%>
 			<p> No recommendations. Get more foodie friends!</p>
 		<%else%>
