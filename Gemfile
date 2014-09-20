@@ -45,7 +45,7 @@ gem 'pry', '~>0.10.1'
 gem 'pry-nav'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
