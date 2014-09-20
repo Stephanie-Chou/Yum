@@ -27,24 +27,32 @@ class UsersController < ApplicationController
         redirect_to root_path
       end
     end
-    # redirect_to root_path
 
     if request.xhr?
+      p "login xhr"
     	render :json => Recommendation.where(recFor: @user).to_json(:include => [:restaurant, :recBy])
     else
+      p "login redirect"
     	redirect_to root_path
     end
   end
 
   def logout
+    
     session[:user_id] = nil
-    redirect_to root_path
+    if request.xhr?
+      p "logout xhr"
+      render :json => {status: 200}
+    else
+      p "logout redirect"
+      redirect_to root_path
+    end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
 end

@@ -4,6 +4,10 @@ class WelcomeController < ApplicationController
   	if signed_in?
   		@recommendations = Recommendation.where(recFor: current_user)
   	end
+    @friend_requests = User.find_friend_requests(current_user)
+    if request.xhr?
+      render :json => @friend_requests.to_json
+    end
   end
 
   def yelp
@@ -21,6 +25,45 @@ class WelcomeController < ApplicationController
     end
   end
   
+  def friend_request
+    if User.exists?(email: params[:email])
+      user = User.find_by(email: params[:email])
+      if Friend.exists?(user1: current_user, user2: user) || Friend.exists?(user2: current_user, user1: user)
+        if request.xhr?
+        render :json => {status: 500, message: "You're already foodie friends!"}
+        end
+      elsif user == current_user
+        if request.xhr?
+        render :json => {status: 500, message: "Hey. That's you!"}
+        end
+      else
+        Friend.create(user1: current_user, user2: user, accepted: false)
+        if request.xhr?
+          render :json => {status: 200, message: "Yum!"}
+        end
+      end
+    else
+      if request.xhr?
+        render :json => {status: 500, message: "Sorry. That email doesn't exist!"}
+      end
+    end
+  end
+
+  def accept_request
+    friend = Friend.find(params[:id])
+    if params[:response] == "true"
+      friend.update(accepted: true)
+      message = "you have a new friend!"
+    else
+      # friend.destroy
+      message = "shhh. you rejected someone"
+    end
+
+    if request.xhr?
+      render :json => {status: 200, message: message}
+    end
+  end
+
   def recommend
     # create recommendation
     p params

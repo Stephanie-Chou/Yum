@@ -13,28 +13,26 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
 //= require react
+//= require bootstrap-sprockets
 //= require_tree .
 $(document).ready(function(){
 	$("#login_btn").on("click", function(e){
 		e.preventDefault();
+		console.log("login button")
 		login();
 	});
 	$("#logout").on("click", function(e){
+		console.log("logout button")
 		e.preventDefault();
 		logout();
 	});
 	$("#restaurant_btn").click(function(e){
 		e.preventDefault();
-		console.log("Clicked enter")
 		city = $("#city").val();
 		term = $("#term").val();
-		console.log(city)
-		console.log(term)
 		request = $.get("yelp", {city: city, term: term});
 		request.done(function(data){
-			console.log(data.businesses)
 			RenderRestaurantCollection(data.businesses);
 		});
 	});
@@ -47,10 +45,40 @@ $(document).ready(function(){
 			$("#recModal_alert").html('<div class="alert alert-success" role="alert">Yum!</div>')
 		});
 	});
-	// find the restaurants
-	// select restaurant to recommend
-	// select friends
-	// hit "RECOMMEND!"
+	
+	$("#friend_btn").click(function(){
+		email = $("#friend").val();
+		request = $.get("friend_request", {email: email});
+		request.done(function(data){
+			if (data.status === 200){
+				$("#friendModal_alert").html('<div class="alert alert-success" role="alert">'+data.message+'</div>')
+			}
+			else{
+				$("#friendModal_alert").html('<div class="alert alert-danger" role="alert">'+data.message+'</div>')
+			}
+		});
+	});
 
+	$(".request").click(function(e){
+		var response;
+		var id = $(this).attr('id');
+		if (e.target.classList.contains("accept")){
+			response = true; 
+		}
+		else{
+			response = false;
+		}
+		var request = $.post('accept_request', {response: response, id: id});
+		request.done(function(data){
+			if (data.status === 200){
+				$("#friendModal_alert").html('<div class="alert alert-success" role="alert">'+data.message+'</div>')
+			}
+			else{
+				$("#friendModal_alert").html('<div class="alert alert-danger" role="alert">'+data.message+'</div>')
+			}
+			// removed the friend from the list
+			this.remove();
+		}.bind(this));
+	});
 
 });

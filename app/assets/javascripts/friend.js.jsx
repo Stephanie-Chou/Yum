@@ -19,7 +19,7 @@ var FriendCollection = React.createClass({
 	},
 	render: function(){
 		return(
-			<ul><h2>Friends!</h2> {this.state.collection}</ul>
+			<div className = "list-group"><h2>Friends!</h2> {this.state.collection}</div>
 		)
 	}
 })
@@ -40,7 +40,7 @@ var Friend = React.createClass({
 	},
 	render: function(){
 		return(
-			<li onClick= {this.onClick} id={this.id}>{this.props.name}</li>
+			<a className = "list-group-item" onClick= {this.onClick} id={this.id}>{this.props.name}</a>
 		)
 	}
 });

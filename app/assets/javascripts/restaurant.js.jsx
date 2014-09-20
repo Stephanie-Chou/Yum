@@ -18,7 +18,7 @@ var RestaurantCollection = React.createClass({
 	},
 	render: function(){
 		return(
-			<ul>{this.state.collection}</ul>
+			<div className = "list-group">{this.state.collection}</div>
 		)
 	}
 })
@@ -39,7 +39,7 @@ var Restaurant = React.createClass({
 	},
 	render: function(){
 		return(
-			<li onClick= {this.onClick} id={this.id}>{this.props.name}</li>
+			<a className="list-group-item" onClick= {this.onClick} onMouseOver={this.onMouseOver} id={this.id}>{this.props.name}</a>
 		)
 	}
 });

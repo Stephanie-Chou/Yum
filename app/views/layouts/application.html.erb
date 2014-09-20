@@ -69,10 +69,27 @@
 	        <h4 class="modal-title" id="myModalLabel">Foodie Friend Finder</h4>
 	      </div>
 	      <div class="modal-body">
+	      	<div id = "friendModal_alert"> </div>
 	        <form id="friend_form">
-						<input type="text" class="form-control" id="friend" placeholder="friend"/>
-						<button type="submit" class="btn btn-default" id = "friend_btn"> Enter</button>
+						<input type="text" class="form-control" id="friend" placeholder="Email"/>
+						<button type="submit" class="btn btn-default" id = "friend_btn"> Send Request</button>
 					</form>
+					<div id="friendRequests">
+						<h4> People Who Want to Eat Food with You</h4>
+						<%unless @friend_requests.nil?%>
+							<div class="list-group">
+							<%@friend_requests.each do |request|%>
+								<a class = "list-group-item request" id = <%=request.id%>>
+									<%= request.user1.name%>
+									<span>
+										<button type="button" class="btn btn-success accept">Yum!</button>
+										<button type="button" class="btn btn-danger reject">Nope</button>
+									</span>
+								</a>
+							<%end%>
+							</div>
+						<%end%>
+					</div>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
