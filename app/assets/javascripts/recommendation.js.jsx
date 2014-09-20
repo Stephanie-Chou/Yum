@@ -8,12 +8,21 @@ var RecommendationCollection = React.createClass({
 		return {collection: collection};
 	},
 	render: function(){
-		return(
-			<div>
-				<h2> Yum!</h2>
-				{this.state.collection}
-			</div>
-		)
+		if (this.props.recommendations.length === 0){
+			return(
+				<div>
+					<h4>Recommendations:</h4>
+					<p> No recommendations. Get more foodie friends!</p>
+				</div>
+			)
+		}else{
+			return(
+				<div>
+					<h2> Yum!</h2>
+					{this.state.collection}
+				</div>
+			)
+		}
 	}
 });
 var Recommendation = React.createClass({

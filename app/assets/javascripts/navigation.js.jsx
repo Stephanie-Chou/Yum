@@ -67,7 +67,7 @@ var Login = React.createClass({
 			console.log("logged in");
 			RenderNavigation(true);
 			RenderRecommendationCollection(data);
-			debugger;
+			window.location.reload();
 		});
 	}
 

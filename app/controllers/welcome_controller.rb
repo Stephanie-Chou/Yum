@@ -28,13 +28,23 @@ class WelcomeController < ApplicationController
   def friend_request
     if User.exists?(email: params[:email])
       user = User.find_by(email: params[:email])
-      Friend.create(user1: current_user, user2: user, accepted: false)
-      if request.xhr?
-        render :json => {status: 200, message: "Yum!"}
+      if Friend.exists?(user1: current_user, user2: user) || Friend.exists?(user2: current_user, user1: user)
+        if request.xhr?
+        render :json => {status: 500, message: "You're already foodie friends!"}
+        end
+      elsif user == current_user
+        if request.xhr?
+        render :json => {status: 500, message: "Hey. That's you!"}
+        end
+      else
+        Friend.create(user1: current_user, user2: user, accepted: false)
+        if request.xhr?
+          render :json => {status: 200, message: "Yum!"}
+        end
       end
     else
       if request.xhr?
-        render :json => {status: 100, message: "Sorry. That email doesn't exist!"}
+        render :json => {status: 500, message: "Sorry. That email doesn't exist!"}
       end
     end
   end

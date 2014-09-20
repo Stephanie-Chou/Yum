@@ -27,7 +27,13 @@
 // var FriendRequest = React.createClass({
 // 	render: function(){
 // 		return(
-// 			<a className = "list-group-item" onClick= {this.onClick} id={this.id}>{this.props.email}</a>
+// 			<a className = "list-group-item request" id = {this.id}>
+// 				{this.props.name}
+// 				<span>
+// 					<button type="button" className="btn btn-success accept">Yum!</button>
+// 					<button type="button" className="btn btn-danger reject">Nope</button>
+// 				</span>
+// 			</a>
 // 		)
 // 	}
 // });
