@@ -3,8 +3,8 @@ class WelcomeController < ApplicationController
   def index
   	if signed_in?
   		@recommendations = Recommendation.where(recFor: current_user)
+      @friend_requests = User.find_friend_requests(current_user)
   	end
-    @friend_requests = User.find_friend_requests(current_user)
   end
 
   def yelp
