@@ -17,13 +17,14 @@
 //= require bootstrap-sprockets
 //= require_tree .
 $(document).ready(function(){
+	console.log("document ready");
 	$("#login_btn").on("click", function(e){
 		e.preventDefault();
-		console.log("login button")
+		console.log("login button");
 		login();
 	});
 	$("#logout").on("click", function(e){
-		console.log("logout button")
+		console.log("logout button");
 		e.preventDefault();
 		logout();
 	});
