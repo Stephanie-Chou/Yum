@@ -19,16 +19,15 @@
 $(document).ready(function(){
 	console.log("document ready");
 
-	// $("#restaurant_btn").click(function(e){
-	// 	e.preventDefault();
-	// 	city = $("#city").val();
-	// 	term = $("#term").val();
-	// 	request = $.get("yelp", {city: city, term: term});
-	// 	request.done(function(data){
-	// 		RenderRestaurantCollection(data.businesses);
-	// 	});
-	// });
-
+	$("#restaurant_btn").click(function(e){
+		e.preventDefault();
+		city = $("#city").val();
+		term = $("#term").val();
+		request = $.get("yelp", {city: city, term: term});
+		request.done(function(data){
+			RenderRestaurantCollection(data.businesses);
+		});
+	});
 	// $("#recommend_btn").click(function(){
 	// 	console.log("hit recommend");
 	// 	request = $.post("recommend", {restaurant: selectedRestaurant, friend: selectedFriend })
@@ -75,4 +74,4 @@ $(document).ready(function(){
 // 		}.bind(this));
 // 	});
 
-// });
+});
