@@ -12,10 +12,9 @@ Rails.application.routes.draw do
   get '/friends' => 'welcome#friends'
   get '/friend_request' => 'welcome#friend_request'
   post '/accept_request' => 'welcome#accept_request'
-  post '/users/login' => 'users#login'
-  post '/users/logout' => 'users#logout'
-
-  get '/fizzbuzz' => 'fizzbuzz#index'
+  get '/login' => 'users#login'
+  get '/logout' => 'users#logout'
+  get '/profile' => 'users#profile'
 
   resources :users
   

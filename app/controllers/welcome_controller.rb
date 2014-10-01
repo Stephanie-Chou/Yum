@@ -1,18 +1,14 @@
 class WelcomeController < ApplicationController
 	include SessionHelper
   def index
-  	if signed_in?
-      p "signed in"
-  		@recommendations = Recommendation.where(recFor: current_user)
-      @friend_requests = User.find_friend_requests(current_user)
-  	end
+  	@user = User.new
   end
 
   def yelp
   	returnVal = Recommendation.find(params[:city], params[:term])
   	if request.xhr?
   		render :json => returnVal.to_json
-  	end
+    end
   end
   
   def friends

@@ -20,7 +20,7 @@
 	      <ul class="nav navbar-nav">
 	        <li id = "add_friend" data-toggle="modal" data-target="#friendModal"><a>Add Friend</a></li>
 					<li id = "new_rec" data-toggle="modal" data-target="#recModal"><a>New Recommendation</a></li>
-      		<li id = "logout"><a href="#">Logout</a></li>
+      		<li id = "logout"> <%=link_to "Logout", logout_path %></li>
 	      </ul>	      
 	      <%end%>
 	    </div>
@@ -30,71 +30,6 @@
 	<div class= "row col-md-6 col-md-offset-3" id = "main_container">
 		<%= yield %>
 	</div>
-	<!-- Recommendation Modal -->
-	<div class="modal fade" id="recModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Recommend the Yumminess</h4>
-	      </div>
-	      <div class="modal-body">
-	      	<div id = "recModal_alert"> </div>
-	        <form id="restaurant_form">
-	        	<p>Search for Restaurant</p>
-						<input type="text" class="form-control" id="city" placeholder="City"/>
-						<input type="text" class="form-control" id="term" placeholder="Search term"/>
-						<button type="submit" class="btn btn-default" id = "restaurant_btn"> Enter</button>
-					</form>
-					<div id = "restaurant_results">
-					</div>
-					<div id = "friends">
-						<h2>Friends!</h2>
-					</div>
-
-					<button class="btn btn-default" id = "recommend_btn">Recommend</button>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	<!-- Friend Modal -->
-	<div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Foodie Friend Finder</h4>
-	      </div>
-	      <div class="modal-body">
-	      	<div id = "friendModal_alert"> </div>
-	        <form id="friend_form">
-						<input type="text" class="form-control" id="friend" placeholder="Email"/>
-						<button type="submit" class="btn btn-default" id = "friend_btn"> Send Request</button>
-					</form>
-					<div id="friendRequests">
-						<h4> People Who Want to Eat Food with You</h4>
-						<%unless @friend_requests.nil?%>
-							<div class="list-group">
-							<%@friend_requests.each do |request|%>
-								<a class = "list-group-item request" id = <%=request.id%>>
-									<%= request.user1.name%>
-									<span>
-										<button type="button" class="btn btn-success accept">Yum!</button>
-										<button type="button" class="btn btn-danger reject">Nope</button>
-									</span>
-								</a>
-							<%end%>
-							</div>
-						<%end%>
-					</div>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
+	
 </body>
 </html>
