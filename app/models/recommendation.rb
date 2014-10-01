@@ -15,10 +15,12 @@ class Recommendation < ActiveRecord::Base
 	def self.find(location, term)
 		client = Yelp::Client.new({ consumer_key: "p1AVHI_NO6lY4azN6D0-eA",
                             consumer_secret: "iHjRAfO1MAhv_ac_u3ODwwra4jY",
-                            token: "GuejeybEXXJiO7K3a2-CtmV3emSClH8u",
-                            token_secret: "QqvmpQNaP6XyggS2k3eXG7HbJQs"
+                            token: "8XDsNOKM-kGwQF0dMbFHfQEu9GABgb1J",
+                            token_secret: "KPG5vNJRdavKKSE5aSkM0zxiAWM"
                           })
 		# business = client.business('the-purple-pig-chicago')
+		p location, term
+		binding.pry
 		results = client.search(location, { term: term })
 	end
 end
