@@ -19,24 +19,23 @@
 $(document).ready(function(){
 	console.log("document ready");
 
-	// $("#restaurant_btn").click(function(e){
-	// 	e.preventDefault();
-	// 	city = $("#city").val();
-	// 	term = $("#term").val();
-	// 	request = $.get("yelp", {city: city, term: term});
-	// 	request.done(function(data){
-	// 		RenderRestaurantCollection(data.businesses);
-	// 	});
-	// });
-
-	// $("#recommend_btn").click(function(){
-	// 	console.log("hit recommend");
-	// 	request = $.post("recommend", {restaurant: selectedRestaurant, friend: selectedFriend })
-	// 	request.done(function(data){
-	// 		// send alert done
-	// 		$("#recModal_alert").html('<div class="alert alert-success" role="alert">Yum!</div>')
-	// 	});
-	// });
+	$("#restaurant_btn").click(function(e){
+		e.preventDefault();
+		city = $("#city").val();
+		term = $("#term").val();
+		request = $.get("yelp", {city: city, term: term});
+		request.done(function(data){
+			RenderRestaurantCollection(data.businesses);
+		});
+	});
+	$("#recommend_btn").click(function(){
+		console.log("hit recommend");
+		request = $.post("recommend", {restaurant: selectedRestaurant, friend: selectedFriend })
+		request.done(function(data){
+			// send alert done
+			$("#recModal_alert").html('<div class="alert alert-success" role="alert">Yum!</div>')
+		});
+	});
 	
 // 	$("#friend_btn").click(function(){
 // 		email = $("#friend").val();
@@ -75,4 +74,4 @@ $(document).ready(function(){
 // 		}.bind(this));
 // 	});
 
-// });
+});

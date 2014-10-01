@@ -58,3 +58,11 @@ var Restaurant = React.createClass({
 			RenderFriendCollection(data);
 		});
 	}
+
+
+	function RenderRestaurantCollection(restaurants){
+		React.renderComponent(
+			<RestaurantCollection restaurants = {restaurants}/>,
+			document.getElementById('restaurant_results')
+		)
+	}

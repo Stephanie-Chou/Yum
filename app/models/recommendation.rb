@@ -20,7 +20,6 @@ class Recommendation < ActiveRecord::Base
                           })
 		# business = client.business('the-purple-pig-chicago')
 		p location, term
-		binding.pry
 		results = client.search(location, { term: term })
 	end
 end

@@ -44,3 +44,9 @@ var Friend = React.createClass({
 		)
 	}
 });
+function RenderFriendCollection(friends){
+		React.renderComponent(
+			<FriendCollection friends = {friends}/>,
+			document.getElementById('friends')
+		)
+	}
