@@ -28,14 +28,14 @@ $(document).ready(function(){
 			RenderRestaurantCollection(data.businesses);
 		});
 	});
-	// $("#recommend_btn").click(function(){
-	// 	console.log("hit recommend");
-	// 	request = $.post("recommend", {restaurant: selectedRestaurant, friend: selectedFriend })
-	// 	request.done(function(data){
-	// 		// send alert done
-	// 		$("#recModal_alert").html('<div class="alert alert-success" role="alert">Yum!</div>')
-	// 	});
-	// });
+	$("#recommend_btn").click(function(){
+		console.log("hit recommend");
+		request = $.post("recommend", {restaurant: selectedRestaurant, friend: selectedFriend })
+		request.done(function(data){
+			// send alert done
+			$("#recModal_alert").html('<div class="alert alert-success" role="alert">Yum!</div>')
+		});
+	});
 	
 // 	$("#friend_btn").click(function(){
 // 		email = $("#friend").val();
