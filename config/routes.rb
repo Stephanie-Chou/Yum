@@ -4,7 +4,14 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-
+  get '/yelp' => 'welcome#yelp'
+  post '/recommend' => 'welcome#recommend'
+  get '/friends' => 'welcome#friends'
+  get '/friend_request' => 'welcome#friend_request'
+  post '/accept_request' => 'welcome#accept_request'
+  get '/login' => 'users#login'
+  get '/logout' => 'users#logout'
+  get '/profile' => 'users#profile'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
