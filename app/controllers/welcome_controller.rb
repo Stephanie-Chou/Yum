@@ -1,7 +1,11 @@
 class WelcomeController < ApplicationController
   include SessionHelper
   def index
-    @user = User.new
+    if signed_in?
+      redirect_to profile_path
+    else
+      @user = User.new
+    end
   end
 
   def yelp
