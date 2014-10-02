@@ -23,7 +23,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		city = $("#city").val();
 		term = $("#term").val();
-		console.log("clcked restaurant button");g
+		console.log("clicked restaurant button");
 		// request = $.get("yelp", {city: city, term: term});
 		// request.done(function(data){
 		// 	// RenderRestaurantCollection(data.businesses);
