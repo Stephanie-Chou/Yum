@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require react
 //= require bootstrap-sprockets
+//= require react
+//= require turbolinks
 //= require_tree .
 $(document).ready(function(){
 	console.log("document ready");
