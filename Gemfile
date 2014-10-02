@@ -32,6 +32,9 @@ gem 'yelp', require: 'yelp'
 
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+
 gem 'pry', '~>0.10.1'
 gem 'pry-nav'
 # Use unicorn as the app server
