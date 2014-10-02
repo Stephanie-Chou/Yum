@@ -24,13 +24,12 @@ $(document).ready(function(){
 		city = $("#city").val();
 		term = $("#term").val();
 		console.log("clicked restaurant button");
-		// request = $.get("yelp", {city: city, term: term});
-		// request.done(function(data){
-		// 	// RenderRestaurantCollection(data.businesses);
-		// 	console.log(data);
-		// 	debugger;
+		request = $.get("yelp", {city: city, term: term});
+		request.done(function(data){
+			RenderRestaurantCollection(data.businesses);
+			console.log(data);
 
-		// });
+		});
 	});
 	$("#recommend_btn").click(function(){
 		console.log("hit recommend");
