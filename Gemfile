@@ -30,6 +30,7 @@ gem 'rails_12factor'
 gem 'bcrypt', '~> 3.1.7'
 gem 'yelp', require: 'yelp'
 
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 
 gem 'pry', '~>0.10.1'
 gem 'pry-nav'
