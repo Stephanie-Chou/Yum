@@ -7,8 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container">
+	  	<div class="navbar-header">
+	      <a class="navbar-brand" href="#">Yum!</a>
+    	</div>
+	    <div class="collapse navbar-collapse" id="navOptions">
+	    	<%if signed_in?%>
+	      <ul class="nav navbar-nav">
+	        <li id = "add_friend" data-toggle="modal" data-target="#friendModal"><a>Add Friend</a></li>
+					<li id = "new_rec" data-toggle="modal" data-target="#recModal"><a>New Recommendation</a></li>
+      		<li id = "logout"> <%=link_to "Logout", logout_path %></li>
+	      </ul>	      
+	      <%end%>
+	    </div>
+	  </div>
+	</nav>
 
-<%= yield %>
+	<div class= "row col-md-6 col-md-offset-3" id = "main_container">
+		<%= yield %>
+	</div>
+	
 
 </body>
 </html>
