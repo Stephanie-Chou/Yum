@@ -35,8 +35,8 @@ class UsersController < ApplicationController
   end
 
   def login
-    p "*"*100
   	@user = User.find_by_email(params[:user][:email])
+    
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
       p session[:user_id]

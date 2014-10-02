@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
     if signed_in?
       redirect_to profile_path
     else
+      binding.pry
       @user = User.new
     end
   end
