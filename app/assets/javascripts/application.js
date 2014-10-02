@@ -19,6 +19,27 @@
 //= require_tree .
 $(document).ready(function(){
 	console.log("ready");
+	$("#restaurant_btn").click(function(e){
+		e.preventDefault();
+		city = $("#city").val();
+		term = $("#term").val();
+		console.log("clicked restaurant button");
+		// request = $.get("yelp", {city: city, term: term});
+		// request.done(function(data){
+		// 	// RenderRestaurantCollection(data.businesses);
+		// 	console.log(data);
+		// 	debugger;
+
+		// });
+	});
+	$("#recommend_btn").click(function(){
+		console.log("hit recommend");
+		request = $.post("recommend", {restaurant: selectedRestaurant, friend: selectedFriend })
+		request.done(function(data){
+			// send alert done
+			$("#recModal_alert").html('<div class="alert alert-success" role="alert">Yum!</div>')
+		});
+	});
 });
 
 
