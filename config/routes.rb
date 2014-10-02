@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/login' => 'users#login'
   get '/logout' => 'users#logout'
   get '/profile' => 'users#profile'
+
+  resources :users
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
