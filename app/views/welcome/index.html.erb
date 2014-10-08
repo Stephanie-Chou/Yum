@@ -1,10 +1,17 @@
-<form accept-charset="UTF-8" action="/login" method="get">
-  <div class="form-group">
-    <input class="form-control" id="user_email" name="user[email]" type="email" placeholder="email">
-  </div>
-  <div class="form-group">
-    <input class="form-control" id="user_password" name="user[password]" type="password" placeholder = "password">
-  </div>
-  <input class="btn btn-default" name="commit" type="submit" value="Log In">
-</form>
-<%= link_to "sign up", new_user_path%> 
+<div id = "loginpage">
+	<div class = "login text-center">
+		<div class = "white page-header">
+				<h1 >Get Yummy</h1>
+		</div>
+		<form accept-charset="UTF-8" action="/login" method="get">
+		  <div class="form-group">
+		    <input class="form-control" id="user_email" name="user[email]" type="email" placeholder="email">
+		  </div>
+		  <div class="form-group">
+		    <input class="form-control" id="user_password" name="user[password]" type="password" placeholder = "password">
+		  </div>
+		  <input class="btn btn-success" name="commit" type="submit" value="Log In">
+		</form>
+		<div class="btn btn-default"><%= link_to "sign up", new_user_path%> </div>
+	</div>
+</div>

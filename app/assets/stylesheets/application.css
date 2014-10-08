@@ -14,6 +14,25 @@
  *= require_self
  */
 
- body{
- 	padding-top: 70px;
+ body,html{
+ 	padding-top: 20px;
+ 	height:100%;
  }
+
+#loginpage{
+	height: 100%;
+	width:100%;
+	padding: 50px;
+	background-image: url("images/food.jpg");
+	background-size: cover;
+}
+
+.login{
+	/*margin-top:20%;*/
+	width:50%;
+	margin: 10% auto;
+}
+
+.white{
+	color: white;
+}
