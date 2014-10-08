@@ -2,11 +2,10 @@
 <h4>Recommendations for <%=@user.name%>:</h4>
 <%if @recommendations.length == 0%>
 	<p> No recommendations. Get more foodie friends!</p>
-<%else%>
-	<% @recommendations.each do |rec| %>
-		<li> <%= rec.restaurant.name %> approved by <%=rec.recBy.name%></li>
-	<%end%>
+
+
 <%end%>
+	<div id ="recommendationList"> hello</div>
 
 
 <!-- Recommendation Modal -->
