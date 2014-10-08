@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/login' => 'users#login'
   get '/logout' => 'users#logout'
   get '/profile' => 'users#profile'
-
+  get '/recommendations' =>'users#recommendations'
   resources :users
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

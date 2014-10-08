@@ -82,6 +82,8 @@ $(document).ready(function(){
 			this.remove();
 		}.bind(this));
 	});
+
+	 console.log(document.getElementById('recommendationList'));
 });
 
 

@@ -1,3 +1,4 @@
+require 'pry'
 class UsersController < ApplicationController
   include SessionHelper
   #Get form for new user
@@ -9,6 +10,16 @@ class UsersController < ApplicationController
     @user = current_user
     @recommendations = Recommendation.where(recFor: @user)
     @friend_requests = User.find_friend_requests(@user)
+  end
+
+  def recommendations
+    @user = current_user
+    recommendations = Recommendation.where(recFor: @user)
+    # binding.pry
+    if request.xhr?
+      render :json => recommendations.to_json(:include => [:restaurant, :recBy])
+      # render :json => recommendations.to_json
+    end
   end
 
   def logout
