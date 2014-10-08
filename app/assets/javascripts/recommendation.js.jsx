@@ -21,8 +21,8 @@ var RecommendationCollection = React.createClass({
 	},
 	render: function(){
 		 console.log("rendering");
-		return(<div className="recommendationBox">
-			        <h1>Recommendations</h1>
+		return(<div className="recommendationBox list-group">
+	
 			        <Recommendation data={this.state.data} />
 			      </div>)
 	}
@@ -34,13 +34,13 @@ var Recommendation = React.createClass({
 		console.log(this.props.data)
 		 var recommendationNodes = this.props.data.map(function (recommendation) {
       return (
-        <div key={recommendation.id}>
+        <div key={recommendation.id} className= "recommendation list-group-item">
           {recommendation.restaurant.name} approved by {recommendation.recBy.name}
         </div>
       );
     });
 		return (
-			<div className= "recommendation">
+			<div>
 				{recommendationNodes}
 			</div>)
 	}

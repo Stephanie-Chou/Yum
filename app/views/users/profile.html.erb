@@ -1,12 +1,11 @@
-<h2> Yum!</h2>
-<h4>Recommendations for <%=@user.name%>:</h4>
+<div class = "row ">
+<h2 class = "text-center"> Yum!</h2>
+<h4 class = "text-center">Recommendations for <%=@user.name%>:</h4>
 <%if @recommendations.length == 0%>
 	<p> No recommendations. Get more foodie friends!</p>
-
-
 <%end%>
-	<div id ="recommendationList"> hello</div>
-
+	<div id ="recommendationList" class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3"></div>
+</div>
 
 <!-- Recommendation Modal -->
 	<div class="modal fade" id="recModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
