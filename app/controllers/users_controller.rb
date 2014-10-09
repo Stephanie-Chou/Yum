@@ -1,6 +1,7 @@
 require 'pry'
 class UsersController < ApplicationController
   include SessionHelper
+  include ApplicationHelper
   #Get form for new user
   def new
     @user = User.new
@@ -23,20 +24,17 @@ class UsersController < ApplicationController
   end
 
   def logout
-    p "*"*100
     session.clear
     if request.xhr?
       p "logout xhr"
       redirect_to root_path
-      # render :json => {status: 200}
     else
       p "logout redirect "*100
       redirect_to root_path
     end
   end
-  #post for new user
+
   def create
-    binding.pry
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
@@ -49,7 +47,21 @@ class UsersController < ApplicationController
   def login
   	@user = User.find_by_email(params[:user][:email])
     
-    if @user && @user.authenticate(params[:user][:password])
+    @errors = {}
+
+    if @user == nil
+      @errors[404] = "user not found"
+    else
+      @authenticate = @user.authenticate(params[:user][:password])
+      if @authenticate == false
+        @errors[500] = "Password and Email Combination incorrect"
+      end
+    end
+    
+
+    # set_errors(errors)
+    
+    if @user && @authenticate
       session[:user_id] = @user.id
       p session[:user_id]
       if request.xhr?
@@ -65,11 +77,10 @@ class UsersController < ApplicationController
         render :json => {error: '404'}
       else
         p "root "*20
-        redirect_to root_path
+        render :template => "welcome/index", :locals => {:errors => @errors}
+        # redirect_to root_path
       end
     end
-
-    
   end
 
 

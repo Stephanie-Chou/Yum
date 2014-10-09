@@ -37,9 +37,10 @@ $(document).ready(function(){
 		request = $.post("recommend", {restaurant: selectedRestaurant, friend: selectedFriend })
 		request.done(function(data){
 			// send alert done
+			debugger;
 			$("#recModal_alert").show();
 			$("#recModal_alert").html('<div class="alert alert-success" role="alert">Yum!</div>')
-			$(".list-group-item").remove();
+			$(".restaurant.list-group-item").remove();
 			$("#city").val("");
 			$("#term").val("");
 			$("#recModal_alert").fadeOut(2000);

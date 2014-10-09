@@ -1,6 +1,8 @@
 class WelcomeController < ApplicationController
   include SessionHelper
+  include ApplicationHelper
   def index
+    @errors = {}
     if signed_in?
       redirect_to profile_path
     else

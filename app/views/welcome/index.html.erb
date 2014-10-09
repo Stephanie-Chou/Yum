@@ -1,5 +1,13 @@
 <div id = "loginpage">
+
 	<div class = "login text-center">
+		<%if !@errors.empty?%>
+			<div class="alert alert-danger" role="alert">
+				<%@errors.each do |key,error|%>
+					<p> <%=error %> </p>
+				<%end%>
+			</div>
+		<%end%>
 		<div class = "white page-header">
 				<h1 >Get Yummy</h1>
 		</div>
@@ -14,4 +22,6 @@
 		</form>
 		<div class="btn btn-default"><%= link_to "sign up", new_user_path%> </div>
 	</div>
+
+
 </div>
