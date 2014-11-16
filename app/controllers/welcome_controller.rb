@@ -1,3 +1,4 @@
+
 class WelcomeController < ApplicationController
   include SessionHelper
   include ApplicationHelper
@@ -16,7 +17,7 @@ class WelcomeController < ApplicationController
       render :json => returnVal.to_json
     end
   end
-  
+
   def friends
     friends = User.find_friends(current_user)
 
@@ -24,7 +25,7 @@ class WelcomeController < ApplicationController
       render :json => friends.to_json
     end
   end
-  
+
   def friend_request
     if User.exists?(email: params[:email])
       user = User.find_by(email: params[:email])
@@ -61,6 +62,16 @@ class WelcomeController < ApplicationController
 
     if request.xhr?
       render :json => {status: 200, message: message}
+    end
+  end
+
+  def filter
+    p "*"*100
+    input = params["input"]
+    filtered = User.search(input)
+
+    if request.xhr?
+      render :json => {data: filtered}
     end
   end
 

@@ -48,7 +48,10 @@
 	      <div class="modal-body">
 	      	<div id = "friendModal_alert"> </div>
 	        <form id="friend_form">
-						<input type="text" class="form-control" id="friend" placeholder="Email"/>
+						<input type="text" class="form-control" id="friend" placeholder="Email or Name"/>
+						<div class = "friend_suggestion">
+
+						</div>
 						<button type="submit" class="btn btn-default" id = "friend_btn"> Send Request</button>
 					</form>
 					<div id="friendRequests">
@@ -73,3 +76,29 @@
 	      </div>
 	    </div>
 	  </div>
+
+<script type="text/javascript">
+
+		$("#friend").keyup(function(){
+			$(".friend_suggestion").empty();
+			$(".friend_suggestion").hide();
+			var data = {};
+			data["input"] = this.value;
+			if(data.input !== ''){
+				var request = $.get('filter', data);
+
+				request.done(function(data){
+					$(".friend_suggestion").show();
+					data.data.forEach(function(i){
+						$(".friend_suggestion").append('<li class = "friend_choice" onClick = select(this)>'+i.name+' '+ i.email+'</li>');
+
+					});
+				});
+			}
+		});
+
+		function select(e){
+			$("#friend").val(e.innerText);
+		}
+
+</script>

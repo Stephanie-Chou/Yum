@@ -31,6 +31,9 @@ $(document).ready(function(){
 			console.log(data);
 
 		});
+
+
+
 	});
 	$("#recommend_btn").click(function(){
 		console.log("hit recommend");
@@ -66,7 +69,7 @@ $(document).ready(function(){
 		var response;
 		var id = $(this).attr('id');
 		if (e.target.classList.contains("accept")){
-			response = true; 
+			response = true;
 		}
 		else{
 			response = false;
@@ -85,6 +88,10 @@ $(document).ready(function(){
 	});
 
 	 console.log(document.getElementById('recommendationList'));
+
 });
+
+
+
 
 

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/friends' => 'welcome#friends'
   get '/friend_request' => 'welcome#friend_request'
   post '/accept_request' => 'welcome#accept_request'
+  get '/filter' => 'welcome#filter'
   get '/login' => 'users#login'
   get '/logout' => 'users#logout'
   get '/profile' => 'users#profile'

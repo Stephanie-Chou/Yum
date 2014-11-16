@@ -1,3 +1,4 @@
+require 'pry'
 class User < ActiveRecord::Base
 	has_many :friends
 	has_secure_password
@@ -16,5 +17,12 @@ class User < ActiveRecord::Base
 		# user2 is the requestee
 		p "*"*100
 		Friend.where(user2: user, accepted: false)
+	end
+
+	def self.search(input)
+		# search for names
+		# search for emails
+		query = "select * from users where name like '#{input}%'"
+		User.find_by_sql(query)
 	end
 end

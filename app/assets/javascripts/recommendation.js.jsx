@@ -22,7 +22,7 @@ var RecommendationCollection = React.createClass({
 	render: function(){
 		 console.log("rendering");
 		return(<div className="recommendationBox list-group">
-	
+
 			        <Recommendation data={this.state.data} />
 			      </div>)
 	}
@@ -48,7 +48,7 @@ var Recommendation = React.createClass({
 
 $(document).ready(function(){
 	React.renderComponent(
-	  <RecommendationCollection pollInterval={2000}  />,
+	  <RecommendationCollection pollInterval={20000}  />,
 	  document.getElementById('recommendationList')
 	)
 });

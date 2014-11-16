@@ -43,6 +43,18 @@
 	background-color: ghostwhite;
 }
 
-.recommendation{
+.friend_suggestion{
+	background-color: ghostwhite;
+	border: solid 1px black;
+	display: none;
+	padding: 20px;
+}
 
+.friend_choice{
+	list-style: none;
+}
+
+.friend_choice:hover{
+	background-color: white;
+	cursor: pointer;
 }
